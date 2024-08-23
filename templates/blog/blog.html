@@ -1,0 +1,210 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+			<!-- Start Bradcumb Area -->
+			<div class="bradcumb-area blog-1 overlay-bg-5">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col">
+							<!-- Start bradcumb -->
+							<div class="bradcumb text-center">
+								<h3>Blog Grid View</h3>
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li>Blog Grid View</li>
+								</ul>
+							</div>
+							<!-- End bradcumb -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Bradcumb Area -->
+			<!-- Start Blog  Area -->
+			<div class="blog-area pt-90">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="blog-top-bar">
+								<div class="blog-grid-top-bar">
+									<div class="blog-grid-tow">
+										<!-- Start search widget -->
+									    <form class="blog-shearch-form mb-0" action="#">
+		                        			<input class="form-control" placeholder="Search Here" type="text">
+		                        			<button class="submit" type="submit"><i class="fal fa-search"></i></button>
+		                    		    </form>
+										<!-- End search widget -->
+									</div>
+									<div class="blog-grid-one dn-small">
+										<select class="form-select" aria-label="Default select example">
+										  <option selected>Select Adventure Type</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										</select>
+									</div>
+									<div class="blog-grid-three dn-small">
+										<select class="form-select" aria-label="Default select example">
+										  <option selected>Select Price</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid-blog">
+									<ul>
+										<li><a href="#"><i class="fal fa-th"></i></a></li>
+										<li><a href="#"><i class="fal fa-list-ul"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- Start Blog Post -->
+							<div class="single-blog-post-wrap grid isotope_wrap">
+								<div class="row">
+									{% for blog in blogs %}
+									<div class="col-lg-4 col-sm-6 isotope_item">
+										<!-- Start single blog post -->
+										<div class="single-blog-post">
+											<!-- Start blog post thumbnail -->
+											<div class="post-thumbnail">
+												<img style="height: 400px;" src="{{blog.image.url}}" alt="">
+											</div>
+											<!-- End blog post thumbnail -->
+											<div class="single-post-content-thumb">
+												<!-- Start post meta -->
+												<div class="post-meta">
+													<span><i class="fal fa-clock"></i>{{blog.created_at}}</span>
+													<span><i class="fad fa-user"></i>Liza De</span>
+													<span><i class="fal fa-comments"></i>12</span>
+												</div>
+												<!-- End post meta -->
+												<!-- start entry header -->
+												<div class="entry-header">
+													<a href="{% url 'blog_detail' blog.id %}"><h2 class="entry-title">{{blog.title}}</h2></a>
+												</div>
+												<!-- end entry header -->
+												<!-- Start entry content -->
+												<div class="entry-content">
+													<p>{{blog.description}}</p>
+													<a href="#" class="btn more">Read More <i class="fal fa-angle-right"></i></a>
+												</div>
+												<!-- End entry content -->
+											</div>
+										</div>
+										<!-- End single blog post -->
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+							<!-- End Blog Post -->
+							<!-- Start Pagination -->
+							<div class="gane-pagination mt-30 text-center">
+								<ul>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">6</a></li>
+									<li><a href="#">7</a></li>
+								</ul>
+							</div>
+							<!-- End Pagination -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End End Blog Area -->
+			<!-- Start Partner Area -->
+			<div class="partner-area pt-100 pb-220">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+							<!-- Start section title -->
+							<div class="section-title text-center">
+								<p class="title">Our Partners</p>
+								<h2>We team up with the best to give you <span></span> an unmatchable experience</h2>
+							</div>
+							<!-- End section title -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="partner-wrap owl-carousel">
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/1.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/1-1.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/2.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/2-2.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/3.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/3-3.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/4.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/4-4.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/5.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/5-5.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/6.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/6-6.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Partner Area -->
+			<!-- Start Copyright Area -->
+			<div class="copy-right-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Start payment -->
+							<div class="copy-payment">
+								<ul>
+									<li><a href="#"><img src="{% static 'img/payment/1.png' %}" alt=""></a></li>
+									<li><a href="#"><img src="{% static 'img/payment/2.png' %}" alt=""></a></li>
+									<li><a href="#"><img src="{% static 'img/payment/3.png' %}" alt=""></a></li>
+									<li><a href="#"><img src="{% static 'img/payment/4.png' %}" alt=""></a></li>
+								</ul>
+							</div>
+							<!-- End payment -->
+						</div>
+						<div class="col-sm-6">
+							<!-- Start copyright text -->
+							<div class="copyright-text">
+								<p>© 2024 AdventureGene.com All rights reserved.</p>
+							</div>
+							<!-- End copyright text -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Copyright Area -->
+
+		</div>
+        <!-- End Wrapper -->
+			<!-- all js here -->
+
+			{% include 'include/footer.html' %}
+			{% endblock %}

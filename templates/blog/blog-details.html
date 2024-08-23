@@ -1,0 +1,381 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+			<!-- End Header -->
+			<!-- Start Bradcumb Area -->
+			<div class="bradcumb-area blog-1 overlay-bg-4">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col">
+							<!-- Start bradcumb -->
+							<div class="bradcumb text-center">
+								<h3>{{blog.title}}</h3>
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li>Blog Post Detail</li>
+								</ul>
+							</div>
+							<!-- End bradcumb -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Bradcumb Area -->
+			<!-- Start Blog  Area -->
+			<div class="blog-area pt-90">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+							<!-- Start advanture sidebar -->
+							<div class="advanture-sidebar">
+								<!-- Start search widget -->
+								<form class="blog-shearch-form" action="#">
+	                        		<input class="form-control" placeholder="Search Here" type="text">
+	                        		<button class="submit" type="submit"><i class="fal fa-search"></i></button>
+	                    		</form>
+								<!-- End search widget -->
+								<!-- Start single sidebar -->
+								<div class="sigle-adv-sidebar">
+									<h4>Select <span>Categories</span></h4>
+									<ul class="widget-catagories">
+										<li><input type="checkbox"> Camping <span>(110)</span></li>
+										<li><input type="checkbox"> Trekking <span>(52)</span></li>
+										<li><input type="checkbox"> Biking <span>(87)</span></li>
+										<li><input type="checkbox"> Hiking <span>(54)</span></li>
+										<li><input type="checkbox"> Climbing <span>(22)</span></li>
+										<li><input type="checkbox"> Wildlife <span>(62)</span></li>
+										<li><input type="checkbox"> Beach <span>(11)</span></li>
+										<li><input type="checkbox"> Surfing <span>(32)</span></li>
+									</ul>
+								</div>
+								<!-- End single sidebar -->
+								<!-- Start single sidebar -->
+								<div class="sigle-adv-sidebar">
+									<h4>Popular <span>Posts</span></h4>
+									<div class="single-popular-post-wrap">
+										<div class="popular-post-thumb">
+											<img src="{% static 'img/post/p1.jpg' %}" alt="">
+										</div>
+										<div class="popular-post-content">
+											<p>May 11, 2024</p>
+											<a href="#"><h6>Kayaking In The Norwegian Fjords: A Love Story</h6></a>
+										</div>
+									</div>
+									<div class="single-popular-post-wrap">
+										<div class="popular-post-thumb">
+											<img src="{% static 'img/post/p2.jpg' %}" alt="">
+										</div>
+										<div class="popular-post-content">
+											<p>May 11, 2024</p>
+											<a href="#"><h6>Trek The Tour Du Mont Blanc In A Weekend</h6></a>
+										</div>
+									</div>
+									<div class="single-popular-post-wrap">
+										<div class="popular-post-thumb">
+											<img src="{% static 'img/post/p3.jpg' %}" alt="">
+										</div>
+										<div class="popular-post-content">
+											<p>May 11, 2024</p>
+											<a href="#"><h6>Trek The Tour Du Mont Blanc In A Weekend</h6></a>
+										</div>
+									</div>
+									<div class="single-popular-post-wrap">
+										<div class="popular-post-thumb">
+											<img src="{% static 'img/post/p4.jpg' %}" alt="">
+										</div>
+										<div class="popular-post-content">
+											<p>May 11, 2024</p>
+											<a href="#"><h6>Trek The Tour Du Mont Blanc In A Weekend</h6></a>
+										</div>
+									</div>
+								</div>
+								<!-- End single sidebar -->
+								<!-- Start single sidebar -->
+								<div class="sigle-adv-sidebar">
+									<h4>Blog <span>Archives</span></h4>
+									<form action="#" class="blog-sidebar-select">
+										<select class="form-select" aria-label="Default select example">
+										  <option selected="">Select Monthy</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										</select>
+									</form>
+								</div>
+								<!-- End single sidebar -->
+								<!-- Start single sidebar -->
+								<div class="sigle-adv-sidebar">
+									<h4>Select <span>Activities</span></h4>
+									<ul class="widget-activities">
+										<li><a href="#"><img src="{% static 'img/icon/a1.png' %}" alt=""></a></li>
+										<li><a href="#"><img src="{% static 'img/icon/a2.png' %}" alt=""></a></li>
+										<li><a href="#"><img src="{% static 'img/icon/a3.png' %}" alt=""></a></li>
+										<li><a href="#"><img src="{% static 'img/icon/a4.png' %}" alt=""></a></li>
+										<li><a href="#"><img src="{% static 'img/icon/a5.png' %}" alt=""></a></li>
+										<li><a href="#"><img src="{% static 'img/icon/a6.png' %}" alt=""></a></li>
+									</ul>
+								</div>
+								<!-- End single sidebar -->
+							</div>
+							<!-- End advanture sidebar -->
+						</div>
+						<div class="col-lg-9">
+							<!-- Start Blog Post -->
+							<div class="single-blog-post-wrap blog-details">
+								<!-- Start single blog post -->
+								<div class="single-blog-post">
+									<!-- Start blog post thumbnail -->
+									<div class="post-thumbnail">
+										<img src="{% static 'img/post/s1.jpg' %}" alt="">
+										<div class="post-date">
+											<h4>21</h4>
+                                            <h3>October</h3>
+										</div>
+									</div>
+									<!-- End blog post thumbnail -->
+									<div class="single-post-coontent-top">
+										<!-- Start author -->
+										<div class="single-author-wrap">
+											<div class="author-thumb">
+												<img src="{% static 'img/post/author.jpg' %}" alt="">
+											</div>
+											<div class="author-content">
+												<p>Wayne Kask</p>
+												<span>Instructor</span>
+											</div>
+											<div class="author-tag">
+												<p>Beach Tour</p>
+											</div>
+										</div>
+										<!-- End author -->
+										<!-- Start post meta -->
+										<div class="post-meta">
+											<span><i class="fal fa-comments"></i>12</span>
+											<span><i class="fal fa-eye"></i>114</span>
+											<span><i class="fal fa-thumbs-up"></i>320 Likes</span>
+											<span><i class="fad fa-share-alt"></i>Share</span>
+										</div>
+										<!-- End post meta -->
+										<!-- start entry header -->
+										<div class="entry-header">
+											<h2 class="entry-title">5 Unforgettable Things To Do In Pensacola Beach Plus The Best Beaches!</h2>
+										</div>
+										<!-- end entry header -->
+									</div>
+								</div>
+								<!-- End single blog post -->
+                                                                <div class="single-post-content-thumb">
+										<!-- Start entry content -->
+										<div class="entry-content">
+											<p>It doesn’t matter if it’s just for a day or for an entire week… check out this beach packing list and you’re sure to show up Taking a trip to the beach? In this article, I walk you through my tried and tested beach packing list. It doesn’t matter if it’s just for a day or for an entire week… check out this beach packing list and you’re sure to show up prepared. There’s something rejuvenating about soaking up the sun, swimming in the ocean, and basking in the sea breeze. Embark on your beach adventures ready to go to make the most of your sandy times. Whether you’re traveling in a pair, as a family or solo, this packing list is sure to set you up for a successful beach trip.</p>
+											<h4>What to Pack for a Beach Vacation</h4>
+											<p>If you live close enough to a beach that you can take a day trip, you’re one of the lucky ones. All you have to do is pack up your car and go! But it’s still important to make sure you have everything you need for the day so that you don’t have to turn around if you’ve forgotten something. </p>
+											<p>In this list, I walk you through some of my favorite beach essentials including my personal recommendations on products that I have been using for years.</p>
+											<ul>
+												<li><a href="#"><i class="fal fa-angle-right"></i>A Beach Bag</a></li>
+												<li><a href="#"><i class="fal fa-angle-right"></i>Towels</a></li>
+												<li><a href="#"><i class="fal fa-angle-right"></i>Bathing Suit</a></li>
+												<li><a href="#"><i class="fal fa-angle-right"></i>Beach Coverup</a></li>
+												<li><a href="#"><i class="fal fa-angle-right"></i>Water Bottle</a></li>
+												<li><a href="#"><i class="fal fa-angle-right"></i>Sunglasses</a></li>
+											</ul>
+											<div class="quote-single">
+												<h4>“It doesn’t matter if it’s just for a day or for an entire week… check out this beach packing list and you’re sure to show up prepared.”</h4>
+												<p>JANE ELMETS </p>
+												<span>CEO</span>
+											</div>
+											<p>If your trip extends past sunset and it’s permissible to make a fire on the beach, bring a flashlight/headlamp, firewood, kindling, newspaper, marshmallows, graham crackers, chocolate and skewers for a night of s’mores! Yum! While it may seem impossible to get organized for a good day at the beach, simply follow this packing list and your trip should be a breeze! Dying for a sandy getaway but don’t know where to go? Adventure In You has beach guides that cover most of the world. Looking for a destination? Just put “Beach” in the search bar and be amazed by the endless places you can go!</p>
+										</div>
+										<!-- End entry content -->
+									</div>
+									<!-- Start next prev post -->
+									<div class="next-prev-post-wrap">
+										<div class="post-np prev-post">
+											<p>Previous Post:</p>
+											<a href="#"><h5>Unusual Travel Words With Beautiful Meanings</h5></a>
+										</div>
+										<div class="post-np next-post">
+											<p>Next Post:</p>
+											<a href="#"><h5>94 Beach Quotes And Beach Captions To Inspire You</h5></a>
+										</div>
+									</div>
+									<!-- End next prev post -->
+									<!-- Start feedback and comments -->
+									<div class="feedback-comments-wrap">
+										<div class="feedback">
+											<h5>Users Feedback</h5>
+											<h4>People’s Comments</h4>
+											<p>Sed nec fermentum leo. Vestibulum pulvinar, risus quis mollis posuere, lorem lectus pretium turpis, non elementum eros metus ut purus. Morbi hendrerit molestie augue luctus euismod</p>
+											<!-- Start user comments -->
+											<div class="user-comments-wrap">
+												<div class="user-thumb">
+													<img src="{% static 'img/post/u1.jpg' %}" alt="">
+												</div>
+												<div class="user-content">
+													<p class="name">Nellie</p>
+													<p class="date">September 20, 2024</p>
+													<p class="comments">Vestibulum hendrerit tortor vel nunc dapibus egestas. Etiam et aliquam urna, at lacinia metus. Vestibulum iaculis libero eu dui tristique viverra. Ut sit amet interdum enim. Nam quam felis, egestas id ipsum vel, bibendum tempor metus. Donec tristique purus nec orci tempus, sit amet consectetur.</p>
+												</div>
+												<a href="#" class="reply">reply<i class="far fa-long-arrow-alt-right"></i></a>
+											</div>
+											<!-- End user comments -->
+											<!-- Start user comments -->
+											<div class="user-comments-wrap">
+												<div class="user-thumb">
+													<img src="{% static 'img/post/u2.jpg' %}" alt="">
+												</div>
+												<div class="user-content">
+													<p class="name">Jhon</p>
+													<p class="date">October 20, 2024</p>
+													<p class="comments">Vestibulum hendrerit tortor vel nunc dapibus egestas. Etiam et aliquam urna, at lacinia metus. Vestibulum iaculis libero eu dui tristique viverra. Ut sit amet interdum enim. Nam quam felis, egestas id ipsum vel, bibendum tempor metus. Donec tristique purus nec orci tempus, sit amet consectetur.</p>
+												</div>
+												<a href="#" class="reply">reply<i class="far fa-long-arrow-alt-right"></i></a>
+											</div>
+											<!-- End user comments -->
+											<!-- Start user comments -->
+											<div class="user-comments-wrap">
+												<div class="user-thumb">
+													<img src="{% static 'img/post/u3.jpg' %}" alt="">
+												</div>
+												<div class="user-content">
+													<p class="name">Veliarse</p>
+													<p class="date">June 20, 2024</p>
+													<p class="comments">Vestibulum hendrerit tortor vel nunc dapibus egestas. Etiam et aliquam urna, at lacinia metus. Vestibulum iaculis libero eu dui tristique viverra. Ut sit amet interdum enim. Nam quam felis, egestas id ipsum vel, bibendum tempor metus. Donec tristique purus nec orci tempus, sit amet consectetur.</p>
+												</div>
+												<a href="#" class="reply">reply<i class="far fa-long-arrow-alt-right"></i></a>
+											</div>
+											<!-- End user comments -->
+										</div>
+										<div class="user-comments">
+											<h5>Reply Comments</h5>
+											<h4>Leave A Comment</h4>
+											<form action="#" class="user-reply">
+												<!-- Start left reply -->
+												<div class="left-reply">
+													<!-- Start Single Field -->
+													<div class="single-field">
+														<input type="text" class="form-control" id="usr" placeholder="Name">
+													</div>
+													<!-- End Single Field -->
+													<!-- Start Single Field -->
+													<div class="single-field">
+														<input type="email" class="form-control" id="email" placeholder="Email">
+													</div>
+													<!-- End Single Field -->
+													<button class="btn btn-theme-dark mb-30" type="submit">Post Your Comment</button> 
+												</div>
+												<!-- End left reply -->
+												<!-- start right reply -->
+												<div class="right-rply">
+													<!-- Start Single Field -->
+													<div class="single-field">
+														<textarea class="form-control" rows="5" id="comment" placeholder="Enter your message"></textarea>
+													</div>
+													<!-- End Single Field -->
+												</div>
+												<!-- End right reply -->
+											</form>
+										</div>
+									</div>
+									<!-- End feedback and comments -->
+							</div>
+							<!-- End Blog Post -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End End Blog Area -->
+			<!-- Start Partner Area -->
+			<div class="partner-area pt-85 pb-220">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+							<!-- Start section title -->
+							<div class="section-title text-center">
+								<p class="title">Our Partners</p>
+								<h2>We team up with the best to give you <span></span> an unmatchable experience</h2>
+							</div>
+							<!-- End section title -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="partner-wrap owl-carousel">
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/1.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/1-1.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/2.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/2-2.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/3.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/3-3.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/4.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/4-4.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/5.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/5-5.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="{% static 'img/partner/6.jpg' %}" alt="">
+									<img class="top" src="{% static 'img/partner/6-6.jpg' %}" alt="">
+								</div>
+								<!-- End single partner -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Partner Area -->
+
+			<!-- Start Copyright Area -->
+			<div class="copy-right-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Start payment -->
+							<div class="copy-payment">
+								<ul>
+									<li><a href="#"><img src="{% static 'img/payment/1.png' %}" alt=""></a></li>
+									<li><a href="#"><img src="{% static 'img/payment/2.png' %}" alt=""></a></li>
+									<li><a href="#"><img src="{% static 'img/payment/3.png' %}" alt=""></a></li>
+									<li><a href="#"><img src="{% static 'img/payment/4.png' %}" alt=""></a></li>
+								</ul>
+							</div>
+							<!-- End payment -->
+						</div>
+						<div class="col-sm-6">
+							<!-- Start copyright text -->
+							<div class="copyright-text">
+								<p>© 2024 AdventureGene.com All rights reserved.</p>
+							</div>
+							<!-- End copyright text -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Copyright Area -->
+
+		</div>
+        <!-- End Wrapper -->
+			<!-- all js here -->
+
+			{% include 'include/footer.html' %}
+			{% endblock %}

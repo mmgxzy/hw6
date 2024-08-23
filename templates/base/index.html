@@ -1,0 +1,410 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+
+<!-- Start Slider Area -->
+<section class="slider-area">
+	<div id="welcome-slide" class="slide-controls owl-carousel">
+		<!-- Start Single Slide -->
+		<div class="single-slide">
+			<div class="slide-thumb shape-3">
+				<img src="{{index_id.logo.url}}" alt="">
+				<!-- Start Slide Content -->
+				<div class="slide-content">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-10 col-sm-12">
+								<!-- Start Slide content wrap -->
+								<div class="slide-content-area">
+									<!-- Start Single slide content	-->
+									<div class="single-slide-content text-center">
+										<div class="content-text">
+											<h1>{{index_id.title|safe}}</h1>
+											<h2>{{index_id.description|safe}}</h2>
+										</div>
+										<div class="find-adventure-form text-center">
+											<form action="#">
+												<select class="form-select" aria-label="Default select example">
+													<option selected>Select Adventure</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+												<select class="form-select" aria-label="Default select example">
+													<option selected>Select Destination</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+												<input type="date" name="date">
+												<input class="btn btn-theme blue-2" type="submit"
+													value="Find Your Adventure">
+											</form>
+										</div>
+									</div>
+									<!-- End Single slide content	-->
+								</div>
+								<!-- End Slide content wrap-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Slide Content -->
+			</div>
+		</div>
+		<!-- End Single Slide -->
+		<!-- Start Single Slide -->
+
+		<!-- End Single Slide -->
+	</div>
+</section>
+<!-- End Slider Area -->
+<!-- Start About Area -->
+<div class="about-area pt-80">
+	<div class="about-bg style-3">
+		<img src="{{index_id.image.url}}" alt="">
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-lg-8">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							{% for icon_all in icon %}
+							<div class="col-lg-6 col-sm-4">
+								<!-- Start single quick icon -->
+								<div class="single-quick-icon style-3 text-center">
+									<div class="quick-icon-content">
+										<img src="{{icon_all.icon.url}}" style="width: 60px; height: 60px;" alt="">
+										<p>{{icon_all.title}}</p>
+									</div>
+								</div>
+								<!-- End single quick icon -->
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<!-- Start section title -->
+						<div class="section-title">
+							<p class="title">{{index_id.title_2}}</p>
+							<h2>{{index_id.title_3}}</h2>
+						</div>
+						<!-- End section title -->
+						<div class="about-content">
+							<p>{{index_id.description_2}}</p>
+							<a href="#" class="btn btn-theme blue-2">кнопка</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End About Area -->
+<!-- Start Camping Area -->
+<div class="camping-hi-area pt-85 pb-70">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<!-- Start section title -->
+				<div class="section-title text-center">
+					<p class="title">Просмотр по пляжным турам</p>
+					<h2>МЫ ПРЕДЛАГАЕМ РАЗВЛЕЧЕНИЕ<span></span> ДЛЯ ВСЯ СЕМЬЯ В РАЙ!</h2>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				{% for foto_all in foto %}
+				<div class="single-camp-hi">
+					<img src="{{foto_all.foto.url}}" style="width: 600px; height: 300px;"alt="">
+					<div class="camp-hi-content">
+						<a href="#">
+							<h4>{{foto_all.title}}</h4>
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+				<!-- End single camp -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Camping Area -->
+<!-- Start Fun Facts Area -->
+<div class="funfact-area style-3 pb-120">
+	<div class="container">
+		<div class="row justify-content-center pt-85">
+			<div class="col-lg-5">
+				<!-- Start section title -->
+				<div class="section-title text-center">
+					<p class="title">Интерестные факты</p>
+					<h2>Опыт далеко<span></span> Из толпы</h2>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			{% for iconki_all in iconkii %}
+			<div class="col-lg-2 col-sm-4">
+				<!-- Start single fact -->
+				<div class="single-fact text-center">
+					<div class="fact-info">
+						<img src="{{iconki_all.foto.url}}"style="width: 60px; height: 60px;" alt="">
+						<span class="counter">{{iconki_all.number}}</span><span>+</span>
+						<p>{{iconki_all.title}}</p>
+					</div>
+				</div>
+				<!-- Start single fact -->
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- End Fun Facts Area -->
+<!-- Start Selling Tips Area -->
+<div class="selling-tips-area pt-85">
+	<div class="container">
+		<div class="row">
+			{% for trips2 in trips2_all %}
+			<div class="col-lg-3 col-sm-6">
+				<!-- start single adventure -->
+				<div class="single-adventure">
+					<img src="{{ trips2.image.url }}" style="width: 300px; height: 350px;" alt="adventure">
+					<div class="adventure-content">
+						<p class="tour">{{ trips2.data }}</p>
+						<a href="#">
+							<h6>{{ trips2.title }}</h6>
+						</a>
+						<p class="price">${{ trips2.price }}</p>
+					</div>
+				</div>
+				<!-- end single adventure -->
+			</div>
+			{% endfor %}
+			<div class="col-lg-6 order-one">
+				<div class="selling-tips-wrap">
+					<!-- Start single selling tips -->
+					<div class="single-selling-tips section-title">
+						<p class="title">САМЫЕ ПРОДАВАЕМЫЕ ПУТЕШЕСТВИЯ</p>
+						<h2>{{ index_id.title_trips|safe }}</h2>
+						<p>{{ index_id.descriptions_trips|safe }}</p>
+						<a href="#" class="btn btn-theme blue-2 mt-30">САМЫЕ ПРОДАВАЕМЫЕ ПУТЕШЕСТВИЯ</a>
+					</div>
+					<!-- End single selling tips -->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for trips in trips_all %}
+			<div class="col-lg-3 col-sm-6">
+				<!-- start single adventure -->
+				<div class="single-adventure">
+					<img src="{{ trips.image.url }}" style="width: 300px; height: 350px;" alt="adventure">
+					<div class="adventure-content">
+						<p class="tour">{{ trips.data }}</p>
+						<a href="#">
+							<h6>{{ trips.title }}</h6>
+						</a>
+						<p class="price">${{ trips.price }}</p>
+					</div>
+				</div>
+				<!-- end single adventure -->
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- End Selling Tips Area -->
+<!-- Start Subscribe Area -->
+<div class="subscribe-area style-3 pt-120 pb-315">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<!-- Start section title -->
+				<div class="section-title text-center">
+					<p class="title">
+						ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ</p>
+					<h2>Подпишитесь на туристические предложения,<span></span> новости и вдохновение</h2>
+					<p>Присоединяйтесь к нашему сообществу, насчитывающему более 300 000 читателей со всего мира, которые получают электронные письма с новостями,
+					акции и другие приятные вещи от G Adventures.</p>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<!-- start subscribe -->
+				<form action="#" method="post" class="subscribe-form">
+					<input name="email" class="widget-input" placeholder="Введите адрес электронной почты ......" type="email">
+					<button type="submit" class="widget-sbtn">Подпишитесь сейчас</button>
+				</form>
+				<!-- end subscribe -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Subscribe Area -->
+<!-- Start Home Blog Area -->
+<div class="home-blog-area style-3 pt-90 pb-120">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-9">
+				<!-- Start section title -->
+				<div class="section-title text-center">
+					<p class="title">Из блога</p>
+					<h2>Отмеченные наградами истории и мнения<span></span> наполнить свою жизнь приключениями</h2>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			{% for blog_all in blog %}
+			<div class="col-lg-4 col-sm-6">
+				<!-- Start single post blog -->
+				<div class="single-post-blog style-2">
+					<div class="post-thumbnail">
+						<img src="{{blog_all.image.url}}" alt="">
+					</div>
+					<div class="post-list-view">
+						<ul>
+							<li>{{blog_all.data}}</li>
+							<li><i class="far fa-eye"></i> 35</li>
+							<li><i class="fas fa-comment"></i> 37</li>
+						</ul>
+					</div>
+					<div class="post-blog-content">
+						<a href="#">
+							<h4>{{blog_all.title}}</h4>
+						</a>
+						<a href="#" class="more">Читать дальше <i class="fal fa-angle-right"></i></a>
+					</div>
+				</div>
+				<!-- End single post blog -->
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+</div>
+<!-- End Home Blog Area -->
+<!-- Start Guide Area -->
+<div class="guide-area pt-110 pb-80">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<!-- Start section title -->
+				<div class="section-title text-center">
+					<p class="title">Наши гиды и персонал</p>
+					<h2>Полная команда экспертов с вами раньше,<span></span> во время и после поездки</h2>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			{% for work in workers %}
+			<div class="col-sm-4">
+				<!-- Start single guide -->
+				<div class="single-guide">
+					<div class="guide-thumb">
+						<img src="{{work.image.url}}" alt="">
+						<div class="guide-content">
+							<p class="title">{{work.job_title}}</p>
+							<a href="#">
+								<h4>{{work.full_name}}</h4>
+							</a>
+							<ul>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+							<div class="about-guide">
+								<p>{{work.descriptions}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End single guide -->
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+</div>
+<!-- End Guide Area -->
+<!-- Start Partner Area -->
+<div class="partner-area pb-90">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<!-- Start section title -->
+				<div class="section-title text-center">
+					<p class="title">Наши партнеры</p>
+					<h2>Мы объединяемся с лучшими, чтобы дать вам <span></span> ни с чем не сравнимый опыт</h2>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="partner-wrap owl-carousel">
+					<!-- Start single partner -->
+					{% for foto in mini_foto %}
+					<div class="single-partner">
+						<img class="bottom" src="{{foto.title.url}}"style="width: 50px; height: 100px;" alt="">
+						<img class="top" src="{{foto.image2.url}}"style="width: 50px; height: 100px;" alt="">
+					</div>
+					{% endfor %}
+					<!-- End single partner -->
+					<!-- Start single partner -->
+					
+					<!-- End single partner -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Partner Area -->
+<!-- Start Footer Area -->
+
+<!-- Start Copyright Area -->
+<div class="copy-right-area style-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Start payment -->
+				<div class="copy-payment">
+					<ul>
+						<li><a href="#"><img src="{% static 'img/payment/1.png' %}" alt=""></a></li>
+						<li><a href="#"><img src="{% static 'img/payment/2.png' %}" alt=""></a></li>
+						<li><a href="#"><img src="{% static 'img/payment/3.png' %}" alt=""></a></li>
+						<li><a href="#"><img src="{% static 'img/payment/4.png' %}" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- End payment -->
+			</div>
+			<div class="col-sm-6">
+				<!-- Start copyright text -->
+				<div class="copyright-text">
+					<p>© 2024 AdventureGene.com All rights reserved.</p>
+				</div>
+				<!-- End copyright text -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Copyright Area -->
+<!-- End Footer Area -->
+</div>
+<!-- End Wrapper -->
+<!-- all js here -->
+
+{% include 'include/footer.html' %}
+{% endblock %}

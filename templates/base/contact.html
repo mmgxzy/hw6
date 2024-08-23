@@ -1,0 +1,273 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+			<!-- Start Bradcumb Area -->
+			<div class="bradcumb-area style-1 overlay-bg-4">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col">
+							<!-- Start bradcumb -->
+							<div class="bradcumb text-center">
+								<h3>Contact</h3>
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li>Contact</li>
+								</ul>
+							</div>
+							<!-- End bradcumb -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Bradcumb Area -->
+			<!-- Start Contact Area -->
+			<div class="contact-area pt-90 pb-95">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+							<!-- Start section title -->
+							<div class="section-title text-center">
+								<p class="title">Contact Information</p>
+								<h2>We Would Love To<span></span> hear From You</h2>
+								<p>Travel demand is high! Call and chat wait times are longer than normal. We’re working on it and appreciate your patience. It's easy to reach us and we'd love to hear from you. Whether you're raring to get adventuring or you’re just starting to dream, get in touch and we'll help you on your way.</p>
+							</div>
+							<!-- End section title -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-sm-6">
+							<!-- Start single contact -->
+							<div class="single-contact text-center">
+								<div class="contact-thumb">
+									<img src="img/icon/c1.png" alt="">
+								</div>
+								<div class="contact-content">
+									<h4>Our Location</h4>
+									<p>4336 Christensen Road Billings, MT 59101 United States</p>
+								</div>
+							</div>
+							<!-- End single contact -->
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<!-- Start single contact -->
+							<div class="single-contact text-center">
+								<div class="contact-thumb">
+									<img src="img/icon/c2.png" alt="">
+								</div>
+								<div class="contact-content">
+									<h4>Let’s Chat!</h4>
+									<p>Mon - Sat: 9am to 8pm EST Sun: Closed</p>
+									<a href="#" class="chat">Chat with us <i class="fal fa-angle-right"></i></a>
+								</div>
+							</div>
+							<!-- End single contact -->
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<!-- Start single contact -->
+							<div class="single-contact text-center">
+								<div class="contact-thumb">
+									<img src="img/icon/c3.png" alt="">
+								</div>
+								<div class="contact-content">
+									<h4>Phone And Fax</h4>
+									<p>Mobile: <a href="tel:+008012345678">+123-456-7890</a></p>
+									<p>Phone: <a href="tel:+008012345678">+12-3456-6789</a></p>
+									<p>Fax: <a href="tel:+008012345678">+2-3456-6789</a></p>
+								</div>
+							</div>
+							<!-- End single contact -->
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<!-- Start single contact -->
+							<div class="single-contact text-center">
+								<div class="contact-thumb">
+									<img src="img/icon/c4.png" alt="">
+								</div>
+								<div class="contact-content">
+									<h4>Email Address</h4>
+									<a href="mailto:yourname@email.com">admin@adventuren.com</a>
+									<a href="mailto:yourname@email.com">info@adventuren.com</a>
+									<a href="#">www.adventuren.com</a>
+								</div>
+							</div>
+							<!-- End single contact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Contact Area -->
+			<!-- Start Contact Google map Area -->
+			<div class="google-map-area">
+				<!-- Start Google Map -->
+				<div class="google-map-wrap">
+					<!-- Start Map -->
+					<div class="fullwide-map"> 
+						<div id="map_canvas" style="width:100%;height:760px;"></div>
+					</div>
+					<!-- End Map -->
+				</div>
+				<!-- End Google Map -->
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Start section title -->
+							<div class="section-title pt-90">
+								<p class="title">Get In Touch</p>
+								<h2>Drop Us a Line. We'd love<span></span> to hear from you!</h2>
+							</div>
+							<!-- End section title -->
+							<div class="contact-p-contact pb-70">
+								<form method="POST" action="{% url 'contact' %}" class="gane-form">
+									{% csrf_token %}
+									<!-- Start Single Field -->
+									<div class="single-field half-field">
+										<input type="text" name="name" class="form-control" id="usr" placeholder="Как к вам обращаться?">
+									</div>
+									<!-- End Single Field -->
+									<!-- Start Single Field -->
+									<div class="single-field half-field-last">
+										<input type="number" name="number" class="form-control" id="usr" placeholder="Номер телефона">
+									</div>
+									<!-- Start Single Field -->
+									<div class="single-field half-field">
+										<input type="email" name="email" class="form-control" id="usr" placeholder="Email">
+									</div>
+									<!-- End Single Field -->
+									<!-- Start Single Field -->
+									<div class="single-field half-field-last">
+										<input type="tel" name="cause" class="form-control" id="usr" placeholder="Причина заявки">
+									</div>
+									<div class="single-field">
+										<textarea name="message" class="form-control" rows="5" id="comment" placeholder="Enter your message"></textarea>
+									</div>
+									<button class="btn btn-theme" type="submit">Send Message</button> 
+									<!-- End field left -->
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Contact Google map Area -->
+			<!-- Start Partner Area -->
+			<div class="partner-area pt-110 pb-220">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+							<!-- Start section title -->
+							<div class="section-title text-center">
+								<p class="title">Our Partners</p>
+								<h2>We team up with the best to give you <span></span> an unmatchable experience</h2>
+							</div>
+							<!-- End section title -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="partner-wrap owl-carousel">
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="img/partner/1.jpg" alt="">
+									<img class="top" src="img/partner/1-1.jpg" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="img/partner/2.jpg" alt="">
+									<img class="top" src="img/partner/2-2.jpg" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="img/partner/3.jpg" alt="">
+									<img class="top" src="img/partner/3-3.jpg" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="img/partner/4.jpg" alt="">
+									<img class="top" src="img/partner/4-4.jpg" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="img/partner/5.jpg" alt="">
+									<img class="top" src="img/partner/5-5.jpg" alt="">
+								</div>
+								<!-- End single partner -->
+								<!-- Start single partner -->
+								<div class="single-partner">
+									<img class="bottom" src="img/partner/6.jpg" alt="">
+									<img class="top" src="img/partner/6-6.jpg" alt="">
+								</div>
+								<!-- End single partner -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Partner Area -->
+			
+			<!-- Start Copyright Area -->
+			<div class="copy-right-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Start payment -->
+							<div class="copy-payment">
+								<ul>
+									<li><a href="#"><img src="img/payment/1.png" alt=""></a></li>
+									<li><a href="#"><img src="img/payment/2.png" alt=""></a></li>
+									<li><a href="#"><img src="img/payment/3.png" alt=""></a></li>
+									<li><a href="#"><img src="img/payment/4.png" alt=""></a></li>
+								</ul>
+							</div>
+							<!-- End payment -->
+						</div>
+						<div class="col-sm-6">
+							<!-- Start copyright text -->
+							<div class="copyright-text">
+								<p>© 2024 AdventureGene.com All rights reserved.</p>
+							</div>
+							<!-- End copyright text -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Copyright Area -->
+
+		</div>
+        <!-- End Wrapper -->
+		<!-- all js here -->
+
+        <!-- Google Map js -->   
+       <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+           <script type="text/javascript">
+             var map;
+             var grayStyles = [
+               {
+                 featureType: "all",
+                 stylers: [
+                   { saturation: -90 },
+                   { lightness: 50 }
+                 ]
+               },
+             ];
+             var mapOptions = {
+               center: new google.maps.LatLng(41.325663, 19.8029607),
+               zoom: 15,
+               styles: grayStyles,
+               mapTypeId: google.maps.MapTypeId.ROADMAP
+             };
+
+             function initialize() {
+               map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+             }
+
+             google.maps.event.addDomListener(window, 'load', initialize);
+           </script>
+		<!-- main js -->
+		{% include 'include/footer.html' %}
+		{% endblock %}
